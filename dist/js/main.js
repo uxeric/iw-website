@@ -1,0 +1,1 @@
+"use strict";!function(){var a=document.querySelectorAll(".jarallax");jarallax(a,{speed:.75}),a.forEach(function(a){if(a.dataset.gradient){var t="".concat(a.dataset.gradient,", ").concat(a.lastChild.firstChild.style.backgroundImage);a.lastChild.firstChild.style.backgroundImage=t}})}();
