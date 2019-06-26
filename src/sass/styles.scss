@@ -13,10 +13,12 @@
 @import 'base/z-index';
 
 // Atom Styles
+@import 'atoms/forms';
 @import 'atoms/buttons';
 @import 'atoms/divider';
 
 // Molecule Styles
+@import 'molecules/contact';
 @import 'molecules/cta';
 @import 'molecules/footer';
 @import 'molecules/hero';
