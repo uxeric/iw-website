@@ -15,6 +15,8 @@ const uglify = require('gulp-uglify'), // Minifies JS
 
 const handlebars = require('gulp-hb') // Compiles HBS Template Files
 
+const image_resize = require('gulp-image-resize') // Optimize Images, requires: `sudo apt-get install graphicsmagick`
+
 const path = {
   root: 'dist/',
   input: {
@@ -75,6 +77,14 @@ function js_task () {
 
 function images_task () {
   return src([path.input.images])
+    .pipe(
+      image_resize({
+        width: 1920,
+        cover: true, // Maintain aspect ratio
+        upscale: false, // Don't resize up if smaller than 1920px
+        quality: 0.50,
+        flatten: true, // Create one layer for multi-layer PNGs
+      }))
     .pipe(dest(path.output.images))
     .pipe(browser_sync.stream())
 }
@@ -104,7 +114,6 @@ function watch_task () {
       images_task,
     ),
   )
-  // watch('dist/*.html').on('change', browser_sync.reload)
 }
 
 exports.default = series(
