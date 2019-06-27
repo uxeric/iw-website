@@ -23,14 +23,20 @@ const path = {
     html: 'src/views/**/!(_)*.html',
     sass: 'src/sass/**/*.scss',
     js: 'src/js/*.js',
-    images: 'src/images/**/*.{jpg,jpeg,png,gif,svg}',
+    images: 'src/images/**/*.{jpg,jpeg}',
+    favicons: [
+      'src/views/favicon.ico',
+      'src/views/favicon-16x16.png',
+      'src/views/favicon-32x32.png',
+    ],
     hbs_helpers: 'src/lib/helpers/*.js',
   },
   output: {
-    html: 'dist/',
+    html: 'dist',
     css: 'dist/css',
     js: 'dist/js',
     images: 'dist/images',
+    favicons: 'dist',
   },
   partials: {
     atoms: 'src/views/atoms/**/*.hbs',
@@ -76,7 +82,7 @@ function js_task () {
 }
 
 function images_task () {
-  return src([path.input.images])
+  return src([path.input.images], { allowEmpty: true })
     .pipe(
       image_resize({
         width: 1920,
@@ -86,6 +92,12 @@ function images_task () {
         flatten: true, // Create one layer for multi-layer PNGs
       }))
     .pipe(dest(path.output.images))
+    .pipe(browser_sync.stream())
+}
+
+function favicons_task () {
+  return src(path.input.favicons)
+    .pipe(dest(path.output.favicons))
     .pipe(browser_sync.stream())
 }
 
@@ -112,11 +124,12 @@ function watch_task () {
       sass_task, 
       js_task,
       images_task,
+      favicons_task,
     ),
   )
 }
 
 exports.default = series(
-  parallel(html_task, sass_task, js_task, images_task),
+  parallel(html_task, sass_task, js_task, images_task, favicons_task),
   watch_task,
 )

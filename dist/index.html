@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Industrial Webworks</title>
-  <link rel="stylesheet" href="css/styles.css?version=1561561490181">
+  <title>Industrial Webworks | Prototype. Build. Succeed.</title>
+  <link rel="stylesheet" href="css/styles.css?version=1561655121406">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">
-      Industrial Webworks
+  <div class="navbar" id="home">
+    <div class="logo-container">
+      <img class="logo" src="images/industrial-webworks-logo.png" alt="Industrial Webworks Logo">
     </div>
     <div class="nav-items">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">Services</a>
-      <a href="#" class="nav-item">Item 3</a>
-      <a href="#" class="nav-item">Item 4</a>
-      <a href="#" class="nav-item nav-item-button">Contact Us</a>
+      <a href="#home" class="nav-item">Home</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#testimonials" class="nav-item">Testimonials</a>
+      <a href="#contact" class="nav-item nav-item-button">Contact Us</a>
     </div>
-  </div>  <div class="hero jarallax" data-jarallax data-gradient="linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.50))">
+  </div>  <div class="hero jarallax" data-jarallax data-gradient="linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.60))">
     <div class="content">  
       <h2 class="heading">
         <span class="highlight">
@@ -27,12 +28,12 @@
           Succeed.
         </span>
       </h2>
-      <p class="sub-heading">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus nulla suscipit omnis consequatur inventore reprehenderit corrupti quisquam ipsa fugit illo cupiditate, doloremque porro, unde quod officiis placeat molestiae, veniam non!</p>
+      <p class="sub-heading">Create amazing products with minimum resources. Proper wireframing and prototyping to share with your clients, develop a plan for a minimum lovable product, and get continous feedback on features and designs to make sure you're focusing on client value.</p>
       <div class="actions">
-        <a href="#" class="button button-default">
+        <a href="#services" class="button button-default">
           How We Can Help You
         </a>
-        <a href="#" class="button button-ghost-light">
+        <a href="#contact" class="button button-ghost-light">
           Contact Us
         </a>
       </div>
@@ -42,34 +43,42 @@
     <div class="column"></div>
     <div class="column"></div>
   </div>
-  <div class="columns-1 cta">
+  <div class="columns-1 cta" id="services">
     <div class="content">
       <h3 class="heading">Need Web Development <strong>Help?</strong></h3>
       <div class="divider"></div>
       <ul class="body">
-        <li>You have an <strong>application idea</strong> that you would like to <strong>prototype</strong> first?</li>
-        <li>You need help gettings <strong>web application to communicate</strong> with each other through <strong>API</strong>s?</li>
-        <li>A <strong>solidly</strong> built website that requires <strong>little to no maintenance</strong>?</li>
+        <li>You have an <strong>application idea</strong> that you would like to test through <strong>prototyping</strong> first?</li>
+        <li>You need help getting <strong>web applications to communicate</strong> with each other through <strong>API</strong>s?</li>
+        <li>Need a <strong>solid</strong> website that requires <strong>little to no maintenance</strong> on your part?</li>
       </ul>
       <div class="actions">
-        <a href="#" class="button button-ghost-primary">
+        <a href="#contact" class="button button-ghost-primary">
           Get in Touch with Us
         </a>
       </div>
     </div>
-  </div>  <div class="columns-1 testimonials jarallax" data-jarallax data-gradient="linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.50))">
+  </div>  <div class="columns-1 testimonials jarallax" id="testimonials" data-jarallax data-gradient="linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.50))">
     <div class="content">
       <div class="title">Client <strong>Testimonials</strong></div>
       <div class="divider divider-light"></div>
       <div class="body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est itaque minima cumque dolorem porro distinctio soluta provident atque eaque voluptate?
+        <div class="quote left-quote">&ldquo;</div>
+        <div class="quote-text">
+          Through continuous feedback Industrial Webworks' team helped us design an application that even veteran construction guys like me and my clients find easy to use.
+        </div>
+        <div class="quote right-quote">&rdquo;</div>
       </div>
       <div class="client">
         <div class="name">John, President & CEO</div>
-        <div class="organization">ProwareLabs Inc.</div>
+        <div class="organization">
+          <a href="http://prowarelabs.com/">ProwareLabs Inc.</a>
+        </div>
       </div>
     </div>
-  </div>  <h3 class="heading text-align-center">Contact <strong>Us</strong></h3>
+  </div>  <h3 class="heading text-align-center" id="contact">
+    Contact <strong>Us</strong>
+  </h3>
   <div class="divider"></div>
   
   <form class="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="position" data-netlify-recaptcha="true">
@@ -81,33 +90,34 @@
     <div class="actions text-align-center">
       <button class="button button-default" type="submit">Send</button>
     </div>
-  </form>  <div class="footer">
+  </form>  <div class="footer jarallax" data-jarallax data-gradient="linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.925))">
     <div class="columns-3 content">
       <div class="column">
-        <div class="title">About Us</div>
-        <div class="logo">Logo</div>
+        <div class="logo-container">
+          <img class="logo" src="images/industrial-webworks-logo-white.png" alt="Industrial Webworks Logo">
+        </div>
         <div class="body">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde laboriosam voluptas delectus similique!
+          Prototype. Build. <br/>
+          Succeed.
         </div>
       </div>
       <div class="column">
         <div class="title">Quick Links</div>
-        <div class="logo"></div>
-        <ul>
-          <li><a href="#">Link Item</a></li>
-          <li><a href="#">Link Item</a></li>
-          <li><a href="#">Link Item</a></li>
+        <ul class="links">
+          <li><a class="link" href="#home">Home</a></li>
+          <li><a class="link" href="#services">Services</a></li>
         </ul>
       </div>
       <div class="column">
-        <div class="title">Quick Links</div>
-        <div class="logo"></div>
-        <ul>
-          <li><a href="#">Link Item</a></li>
-          <li><a href="#">Link Item</a></li>
-          <li><a href="#">Link Item</a></li>
+        <div class="title">&nbsp;</div>
+        <ul class="links">
+          <li><a class="link" href="#testimonials">Testimonials</a></li>
+          <li><a class="link" href="#contact">Contact Us</a></li>
         </ul>
       </div>
+    </div>
+    <div class="copyright">
+      Copyright &copy; <script>document.write(new Date().getFullYear())</script> Industrial Webworks Inc. All rights reserved.
     </div>
   </div>  
   <!-- Jarallax -->
@@ -119,6 +129,9 @@
   <!-- Include it if you want to parallax any element -->
   <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
   
+  <!-- Script to animate scrolling to anchor links -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  
   <!-- Include Main Last -->
-  <script src="js/main.js?version=1561561490181"></script></body>
+  <script src="js/main.js?version=1561655121406"></script></body>
 </html>

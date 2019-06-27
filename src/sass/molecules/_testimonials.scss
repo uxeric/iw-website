@@ -8,6 +8,22 @@
   .content {
     grid-column-start: 2;
     grid-column-end: 3;
+
+    .body {
+      display: grid;
+      grid-template-columns: 25px auto 25px;
+
+      .left-quote {
+        grid-column: 1 / 2;
+      }
+      .quote-text {
+        grid-column: 2 / 3;
+        padding: 20px $mar-lg $mar-lg $mar-lg;
+      }
+      .right-quote {
+        grid-column: 3 / 4;
+      }
+    }
   }
 }
 
@@ -20,12 +36,41 @@
   color: $white;
 
   .content {
-    font-size: 1.2em;
     text-align: center;
-
+    
     .title {
       font-size: $h3;
       font-weight: 300;
+    }
+    .body {
+      .quote {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 3.5rem;
+      }
+      .quote-text {
+        font-size: 1.35rem;
+        line-height: 1.6;
+      }
+    }
+    .client {
+      .name {
+        font-weight: 500;
+      }
+      .organization {
+        font-weight: 300;
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+  
+        &:link, &:visited, &:focus {
+  
+        }
+        &:hover, &:active {
+          padding-bottom: 2px;
+          border-bottom: 1px solid $white;
+        }
+      }
     }
   }
 }

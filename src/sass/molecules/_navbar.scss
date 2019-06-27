@@ -5,8 +5,13 @@
   padding-top: $mar-sm;
   padding-bottom: $mar-sm;
 
-  .logo {
-    margin: $mar-sm $mar-lg;
+  .logo-container {
+    margin-left: $mar-lg;
+
+    .logo {
+      margin-bottom: -3px;
+      height: 60px;
+    }
   }
   .nav-items {
     justify-self: end;
