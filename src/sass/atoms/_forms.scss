@@ -1,3 +1,4 @@
+// Layout
 form {
   .hidden {
     display: none;
@@ -12,10 +13,19 @@ form {
       color: #555555;
     }
   }
-  input[type]:not([type=hidden]) + input[type]:not([type=hidden]) {
+  .col2  + .col2 {
     margin-left: $mar-md;
   }
   .g-recaptcha > div:first-child {
     margin: 0 auto;
+  }
+}
+
+// Responsive
+@media all and (max-width: $bp-desktop) {
+  form {
+    .col2 + .col2 {
+      margin-left: 0px;
+    }
   }
 }

@@ -21,6 +21,13 @@
   }
 }
 
+// Responsive
+@media all and (max-width: $bp-tablet) {
+  .hero {
+    grid-template-columns: 8% auto 8%;
+  }
+}
+
 // Style
 .hero {
   background-image: url("../images/industrial-03.jpg");

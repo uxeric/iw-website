@@ -1,0 +1,11 @@
+// Bootstrap 4 Breakpoints
+$bp-lg: 1199px;
+$bp-md: 991px;
+$bp-sm: 768px;
+$bp-xs: 575px;
+
+// Aliases
+$bp-desktop:  $bp-lg;
+$bp-tablet:   $bp-md;
+$bp-phone:    $bp-sm;
+$bp-phone-sm: $bp-xs;

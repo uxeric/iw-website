@@ -9,8 +9,9 @@
     margin-left: $mar-lg;
 
     .logo {
-      margin-bottom: -3px;
-      height: 60px;
+      margin-top: 2px;
+      margin-bottom: -5px;
+      height: 52px;
     }
   }
   .nav-items {
@@ -26,8 +27,36 @@
   }
 }
 
+// Responsive
+@media all and (max-width: $bp-tablet) {
+  .navbar {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: none;
+    justify-items: center;
+
+    .logo-container {
+      margin-top: $mar-sm;
+      margin-left: -14px;
+    }
+    .nav-items {
+      display: grid;
+      justify-self: normal;
+      justify-items: center;
+      margin-right: 0px;
+      padding-top: $mar-md;
+      padding-bottom: $mar-sm;
+
+      .nav-item {
+        margin-bottom: $mar-sm;
+      }
+    }
+  }
+}
+
 // Style
 .navbar {
+
   .nav-items {
     .nav-item {
       text-decoration: none;

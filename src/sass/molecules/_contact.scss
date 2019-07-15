@@ -1,3 +1,4 @@
+// Layout
 .contact {
   padding: $mar-xl 0;
   display: grid;
@@ -24,5 +25,37 @@
     margin: $mar-md 0 $mar-xl;
     grid-column: 2 / 4;
     grid-row: 4 / 5;
+  }
+}
+
+// Responsive
+@media all and (max-width: $bp-desktop) {
+  .contact {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 25% 25% 25% 25% 25%;
+  
+    .name {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+    .email {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    .message {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+    .captcha {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+    }
+    .actions {
+      margin: $mar-md 0 $mar-xl;
+      grid-column: 2 / 4;
+      grid-row: 5 / 6;
+    }
   }
 }
