@@ -4,6 +4,7 @@ Built using my own light weight javascript framework. This was a reaction to the
 
 ## Tech Stack
 
+- [Netlify](https://docs.netlify.com/)
 - [Gulp](https://gulpjs.com/)
 - [Handlebars](https://handlebarsjs.com/)
 - [Browser Sync for auto-refresh](https://www.npmjs.com/package/browser-sync)
